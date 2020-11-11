@@ -1,14 +1,14 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "demo");
+$link = mysqli_connect("localhost", "root", "", "demo"); // this is the connection variable (link) setup to pass info on DB location, username, password (if any) & DB name
  
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
  
-// Attempt create table query execution
+// Attempt create table query execution - most sql rules are uppercase
 $sql = "CREATE TABLE persons(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(30) NOT NULL,
